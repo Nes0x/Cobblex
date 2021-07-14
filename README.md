@@ -4,7 +4,7 @@ Plugin polega na losowaniu itemu po postawieniu bloku, jeśli gracz ma wolny slo
 
 # Jak wgrać na serwer 🧐
 
-Aby wgrać plugin na serwer trzeba pobrać z zakładki Releases i dodać go do folderu plugins, plugin został napisany na wersje 1.16.5 
+Aby wgrać plugin na serwer trzeba go pobrać z zakładki Releases i dodać do folderu plugins, plugin został napisany na wersje 1.16.5 
 
 # Komendy 😎
 
