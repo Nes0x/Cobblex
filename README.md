@@ -1,12 +1,12 @@
-# Opis 👨‍💻
+# Opis 
 
 Plugin polega na losowaniu itemu po postawieniu bloku zdefiniowanego w congiu, jeśli gracz ma wolny slot w ekwipunku dostanie wylosowany przedmiot, jeśli nie to gracz zostanie o tym poinformowany wiadomością.
 
-# Jak wgrać na serwer 🧐
+# Jak wgrać na serwer 
 
 Aby wgrać plugin na serwer trzeba go pobrać z zakładki Releases i dodać do folderu plugins, plugin został napisany na wersje 1.16.5 
 
-# Komendy 😎
+# Komendy 
 
 `/cobblex` - jeśli gracz ma 9 stacków bruku i ma jeden wolny slot w ekwipunku daje mu cobblexa.
 
@@ -14,7 +14,7 @@ Aby wgrać plugin na serwer trzeba go pobrać z zakładki Releases i dodać do f
 
 `/cobble reload` - przeładowuje config
 
-# Permisje 📃
+# Permisje 
 
 `cobblex.commands.cx` - pozwala graczowi na użycie komendy cobblex/cx.
 
