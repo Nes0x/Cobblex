@@ -1,6 +1,6 @@
 # Opis 
 
-Plugin polega na losowaniu itemu po postawieniu bloku zdefiniowanego w congiu, jeśli gracz ma wolny slot w ekwipunku dostanie wylosowany przedmiot, jeśli nie to gracz zostanie o tym poinformowany wiadomością.
+Plugin polega na losowaniu itemu po postawieniu bloku zdefiniowanego w configu, jeśli gracz ma wolny slot w ekwipunku dostanie wylosowany przedmiot, jeśli nie to gracz zostanie o tym poinformowany wiadomością.
 
 # Jak wgrać na serwer 
 
