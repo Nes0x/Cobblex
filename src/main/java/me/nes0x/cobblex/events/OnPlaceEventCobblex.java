@@ -42,9 +42,9 @@ public class OnPlaceEventCobblex implements Listener {
                     if (items.get(randomItem).getAmount() == 0) {
                         items.get(randomItem).setAmount(1);
                     }
-
-                    player.getInventory().addItem(items.get(randomItem));
+                    
                     player.getInventory().removeItem(cobblex);
+                    player.getInventory().addItem(items.get(randomItem));
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',
                             Cobblex.getInstance().getConfig().getString("messages.drawn-item")
                                     .replace("%prefix%", Cobblex.getInstance().getConfig().getString("messages.prefix").toString())
