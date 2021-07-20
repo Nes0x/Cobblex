@@ -24,19 +24,12 @@ public class CommandCobblex implements CommandExecutor {
         Player player = (Player) sender;
 
         if (Cobblex.getAmount(player, new ItemStack(Material.COBBLESTONE)) >= 576) {
-            if (player.getInventory().firstEmpty() == -1) {
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&',
-                        Cobblex.getInstance().getConfig().getString("messages.full-inventory-on-command")
-                                .replace("%prefix%", Cobblex.getInstance().getConfig().getString("messages.prefix").toString())));
-            } else {
                 ItemStack cobblex = Cobblex.createCobblex();
-                player.getInventory().addItem(cobblex);
                 player.getInventory().removeItem(new ItemStack(Material.COBBLESTONE, 576));
+                player.getInventory().addItem(cobblex);
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&',
                         Cobblex.getInstance().getConfig().getString("messages.create-cobblex-success")
                                 .replace("%prefix%", Cobblex.getInstance().getConfig().getString("messages.prefix").toString())));
-            }
-
         } else {
             player.sendMessage(ChatColor.translateAlternateColorCodes('&',
                     Cobblex.getInstance().getConfig().getString("messages.no-items-to-create-cobblex")
