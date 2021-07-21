@@ -17,3 +17,12 @@ commands:
     usage: /cobble reload
     permission: cobblex.commands.reload
     permission-message: Nie masz permisji
+
+
+permissions:
+  cobblex.commands.cx:
+    description: Permisja do komendy /cx lub /cobblex
+    default: true
+  cobble:
+    description: Permsija do komendy /cobble reload
+    default: op
