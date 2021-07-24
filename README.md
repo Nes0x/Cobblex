@@ -8,7 +8,7 @@ Aby wgrać plugin na serwer trzeba go pobrać z zakładki Releases i dodać do f
 
 # Komendy 
 
-`/cobblex` - jeśli gracz ma 9 stacków bruku i ma jeden wolny slot w ekwipunku daje mu cobblexa.
+`/cobblex` - jeśli gracz ma 9 stacków bruku daje mu cobblexa.
 
 `/cx` - robi to samo co komenda `/cobblex`.
 
