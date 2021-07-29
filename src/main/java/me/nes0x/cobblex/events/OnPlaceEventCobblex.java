@@ -1,6 +1,8 @@
 package me.nes0x.cobblex.events;
 
 import me.nes0x.cobblex.Cobblex;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -21,6 +23,7 @@ public class OnPlaceEventCobblex implements Listener {
         if (event.getBlock().getType() == Material.valueOf(Cobblex.getInstance().getConfig().getString("cobblex-settings.material").toUpperCase())) {
             if(event.getPlayer().getInventory().getItemInMainHand().getItemMeta().getDisplayName().equals(ChatColor.translateAlternateColorCodes('&',
                                                                                                             Cobblex.getInstance().getConfig().getString("cobblex-settings.name"))))
+
                 if (player.getInventory().firstEmpty() == -1) {
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&',
                             Cobblex.getInstance().getConfig().getString("messages.full-inventory-to-open-cobblex")
@@ -42,14 +45,27 @@ public class OnPlaceEventCobblex implements Listener {
                     if (items.get(randomItem).getAmount() == 0) {
                         items.get(randomItem).setAmount(1);
                     }
-                    
+
                     player.getInventory().removeItem(cobblex);
                     player.getInventory().addItem(items.get(randomItem));
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&',
-                            Cobblex.getInstance().getConfig().getString("messages.drawn-item")
-                                    .replace("%prefix%", Cobblex.getInstance().getConfig().getString("messages.prefix").toString())
-                                    .replace("%item%", items.get(randomItem).getType().toString())
-                                    .replace("%amount%", "" + items.get(randomItem).getAmount())));
+
+                    if (Cobblex.getInstance().getConfig().getBoolean("options-messages.chat")) {
+                        player.sendMessage(ChatColor.translateAlternateColorCodes('&',
+                                Cobblex.getInstance().getConfig().getString("messages.drawn-item")
+                                        .replace("%prefix%", Cobblex.getInstance().getConfig().getString("messages.prefix").toString())
+                                        .replace("%item%", items.get(randomItem).getType().toString())
+                                        .replace("%amount%", "" + items.get(randomItem).getAmount())));
+                    }
+
+                    if (Cobblex.getInstance().getConfig().getBoolean("options-messages.action-bar")) {
+                        player.spigot().sendMessage(ChatMessageType.ACTION_BAR,
+                                new TextComponent(ChatColor.translateAlternateColorCodes('&', Cobblex.getInstance().getConfig().getString("messages.drawn-item")
+                                        .replace("%prefix%", Cobblex.getInstance().getConfig().getString("messages.prefix").toString())
+                                        .replace("%item%", items.get(randomItem).getType().toString())
+                                        .replace("%amount%", "" + items.get(randomItem).getAmount()))));
+                    }
+
+
 
             }
         }
