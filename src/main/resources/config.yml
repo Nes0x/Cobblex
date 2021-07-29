@@ -14,3 +14,7 @@ cobblex-settings:
     - COBBLESTONE
     - DIAMOND
   max-amount-of-drop: 20
+
+options-messages:
+  action-bar: true
+  chat: true
