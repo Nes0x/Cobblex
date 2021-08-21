@@ -1,4 +1,5 @@
 package me.nes0x.cobblex;
+//test
 
 import me.nes0x.cobblex.commands.CommandCobblex;
 import me.nes0x.cobblex.commands.CommandReload;
