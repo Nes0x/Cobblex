@@ -1,0 +1,20 @@
+messages:
+  prefix: '&e&lCOBBLEX'
+  command-in-console: '%prefix% &cNie możesz wykonać tej komendy w konsoli!'
+  create-cobblex-success: '%prefix% &aPomyślnie stworzyłeś cobblexa!'
+  no-items-to-create-cobblex: '%prefix% &cBłąd! Nie masz 9 stacków cobbla w ekwipunku!'
+  full-inventory-to-open-cobblex: '%prefix% &cBład! Masz pełny ekwipunek, nie możesz otworzyć cobblexa!'
+  drawn-item: '%prefix% &aWylosowałeś %item% w ilości %amount%'
+  reload-unknown-argument: '%prefix% &cZłe użycie wpisz /cobble reload'
+  reload-success: '%prefix% &aPomyślnie przeładowano config!'
+cobblex-settings:
+  material: MOSSY_COBBLESTONE
+  name: '&aCOBBLEX'
+  items-drop:
+    - COBBLESTONE
+    - DIAMOND
+  max-amount-of-drop: 20
+
+options-messages:
+  action-bar: true
+  chat: true

@@ -1,0 +1,28 @@
+name: Cobblex
+version: ${project.version}
+main: me.nes0x.cobblex.Cobblex
+api-version: 1.16
+authors: [ Nes0x ]
+description: Plugin na cobblex
+
+commands:
+  cobblex:
+    description: Pozwala stworzyć cobblexa
+    usage: /cobblex
+    permission: cobblex.commands.cx
+    permission-message: Nie masz permisji!
+    aliases: [cx]
+  cobble:
+    description: Pozwala przeładować config
+    usage: /cobble reload
+    permission: cobblex.commands.reload
+    permission-message: Nie masz permisji
+
+
+permissions:
+  cobblex.commands.cx:
+    description: Permisja do komendy /cx lub /cobblex
+    default: true
+  cobble:
+    description: Permsija do komendy /cobble reload
+    default: op
