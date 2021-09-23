@@ -10,6 +10,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.logging.Logger;
+
 public final class Cobblex extends JavaPlugin {
     private static Cobblex instance;
 
@@ -35,8 +37,21 @@ public final class Cobblex extends JavaPlugin {
         return cobblex;
     }
 
+    public static String createMessage(String message) {
+        return ChatColor.translateAlternateColorCodes('&', message);
+    }
+
+
     @Override
     public void onEnable() {
+        Logger logger = this.getLogger();
+
+        new Updater(this, 94626).getVersion(version -> {
+            if (!this.getDescription().getVersion().equalsIgnoreCase(version)) {
+                logger.info("There is a new update available. Download it on: https://www.spigotmc.org/resources/cobblex.94626/");
+            }
+        });
+
         instance = this;
 
         getConfig().options().copyDefaults(true);
