@@ -57,7 +57,7 @@ public class OnPlaceEventCobblex implements Listener {
                     player.getInventory().addItem(items.get(randomItem));
 
 
-                    // wysyłanie wiadomości o wylosowanym przedmiocie użytkownikowi
+                    // wysyłanie wiadomości o wylosowanym przedmiocie użytkownikowiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
                     if (Cobblex.getInstance().getConfig().getBoolean("options-messages.chat")) {
                         player.sendMessage(Cobblex.createMessage(
                                 Cobblex.
